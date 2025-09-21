@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  --bg: #191c1f;
+  --secondary: #252b31;
+  --text: #ffffff;
+  --accent: #ab967c;
+  --highlight: #6c8aa3;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+button {
+  background-color: var(--secondary);
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  text-align: center;
+  justify-content: center;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding: 1rem;
+}
+
+main h3 {
+  padding-bottom: 4rem;
+  color: var(--accent);
+}
+
+button i {
+  padding-right: 10px;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+button:hover {
+  background-color: #384049;
+}
+
+button:hover i {
+  color: var(--highlight);
+}
+
+.eq-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 200px;
+  gap: 20px;
+  overflow: hidden;
+  padding-top: 3rem;
+}
+
+.eq-bar {
+  background-color: var(--highlight);
+  height: 50%;
+  width: 4px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  transform: scaleX(0.5);
+  transition: height 0.7s ease;
+}
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    padding: 1rem 0 1rem;
+  }
+
+  .eq-wrapper {
+    display: none;
+  }
+}
+
+/* Styles for tablets in landscape and small laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .eq-wrapper {
+    display: none;
+  }
+}
+
+/* Styles for large desktops */
+@media screen and (min-width: 1201px) {
+
+}
