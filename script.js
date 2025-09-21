@@ -1,20 +1,6 @@
 //Number of EQ Bars
 const eqWrapper = document.querySelector('eq-wrapper');
-let totalBars;
-
-if (window.innerWidth < 480) {
-  totalBars = 15;
-} else if (window.innerWidth < 769) {
-  totalBars = 20;
-} else {
-  totalBars = 25;
-}
-
-for (let i = 0; i < totalBars; i++) {
-  const bar = document.createElement('div');
-  bar.classList.add('eq-bar');
-  eqWrapper.appendChild(bar);
-}
+let totalBars = 25;
 
 
 
