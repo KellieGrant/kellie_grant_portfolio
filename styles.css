@@ -12,6 +12,7 @@
 
   --bg: #191c1f;
   --secondary: #252b31;
+  --hover: #384049;
   --text: #ffffff;
   --accent: #ab967c;
   --highlight: #6c8aa3;
@@ -22,6 +23,7 @@ body {
   color: var(--text);
   font-family: 'Inter', sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -32,12 +34,18 @@ h1 {
 
 h2 {
   font-size: 3rem;
+  color: var(--accent);
 }
 
 h3 {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 100;
   font-size: 2rem;
+}
+
+p {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text);
 }
 
 button {
@@ -76,7 +84,7 @@ button i {
 }
 
 button:hover {
-  background-color: #384049;
+  background-color: var(--hover);
 }
 
 button:hover i {
@@ -103,6 +111,40 @@ button:hover i {
   transition: height 0.7s ease;
 }
 
+.about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: var(--secondary);
+  border-radius: 20px;
+  margin: 10rem;
+  padding: 3rem;
+}
+
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.tech-stack .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tech-stack .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
 
 
 
