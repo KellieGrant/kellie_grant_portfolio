@@ -1,4 +1,4 @@
-// Nav Bar Hide
+// === Navbar scroll behavior ===
 const navbar = document.getElementById('nav-bar');
 const hero = document.getElementById('welcome-section');
 
@@ -12,6 +12,18 @@ window.addEventListener('scroll', () => {
       navbar.classList.remove('visible');
       navbar.classList.add('hidden');
    }
+});
+
+// === Hamburger toggle for mobile ===
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+   // Toggle nav visibility
+   navLinks.classList.toggle('active');
+
+   // Animate hamburger into "X"
+   hamburger.classList.toggle('open');
 });
 
 //Number of EQ Bars
