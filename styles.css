@@ -949,15 +949,17 @@ footer {
    }
 
    .hero-visual {
-      min-height: 340px;
+      min-height: 285px;
+      padding-bottom: 22px;
    }
 
    .code-laptop {
-      width: 108%;
+      width: 100%;
+      max-width: 520px;
    }
 
    .laptop-bezel {
-      padding: 9px 7px 12px;
+      padding: 8px 6px 10px;
       border-radius: 10px 10px 3px 3px;
    }
 
@@ -968,31 +970,100 @@ footer {
    }
 
    .code-laptop-base {
-      height: 12px;
+      width: 104%;
+      height: 10px;
+      margin-left: -2%;
+   }
+
+   .code-laptop-base span {
+      height: 3px;
+   }
+
+   .editor-titlebar {
+      height: 20px;
+      font-size: 4.5px;
+   }
+
+   .window-controls {
+      left: 7px;
+      gap: 4px;
+   }
+
+   .window-controls span {
+      width: 5px;
+      height: 5px;
    }
 
    .editor-workspace {
-      grid-template-columns: 22px 75px minmax(0, 1fr);
-      height: 285px;
+      grid-template-columns: 18px 62px minmax(0, 1fr);
+      height: 180px;
+   }
+
+   .editor-activity {
+      gap: 9px;
+      padding-top: 7px;
+      font-size: 7px;
    }
 
    .editor-explorer {
+      padding: 5px 3px;
       font-size: 4px;
    }
 
+   .editor-explorer > b {
+      margin: 0 0 5px 2px;
+      font-size: 3.5px;
+   }
+
+   .editor-explorer strong {
+      font-size: 4px;
+   }
+
+   .editor-explorer ul {
+      margin-top: 3px;
+      line-height: 1.7;
+   }
+
    .editor-explorer li {
+      padding-left: 2px;
       overflow: hidden;
       text-overflow: ellipsis;
    }
 
+   .editor-explorer .nested {
+      padding-left: 7px;
+   }
+
+   .editor-tabs {
+      height: 20px;
+      font-size: 4.5px;
+   }
+
+   .editor-tabs span {
+      padding: 5px 7px;
+   }
+
+   .code-breadcrumbs {
+      height: 15px;
+      padding: 4px 7px;
+      font-size: 4px;
+   }
+
    .code-editor {
-      height: 235px;
-      font-size: 4.2px;
+      height: 145px;
+      font-size: 3.6px;
+      line-height: 1.55;
    }
 
    .code-editor .line i {
-      width: 14px;
-      margin-right: 5px;
+      width: 12px;
+      margin-right: 4px;
+   }
+
+   .editor-statusbar {
+      height: 13px;
+      padding-inline: 5px;
+      font-size: 4px;
    }
 
    .editor-statusbar span:last-child {
