@@ -61,51 +61,98 @@
 
             <div
                class="hero-visual"
-               aria-label="RecipeBook application shown on a laptop"
+               role="img"
+               aria-label="A laptop displaying a React and TypeScript project in Visual Studio Code"
             >
                <div class="blueprint"></div>
-               <div class="laptop">
-                  <div class="laptop-screen">
-                     <div class="app-bar">
-                        <b>RecipeBook</b
-                        ><span
-                           >Recipes&nbsp;&nbsp;&nbsp;
-                           Favorites&nbsp;&nbsp;&nbsp; About&nbsp;&nbsp;&nbsp;
-                           ☼</span
-                        >
+               <div class="code-laptop" aria-hidden="true">
+                  <div class="laptop-bezel">
+                     <div class="code-window">
+                  <div class="editor-titlebar">
+                     <div class="window-controls">
+                        <span></span><span></span><span></span>
                      </div>
-                     <div class="app-main">
-                        <div class="app-intro">
-                           <h2>Discover. Cook.<br />Save. Repeat.</h2>
-                           <p>
-                              Your personal recipe collection,<br />organized
-                              and easy to use.
-                           </p>
-                           <div><b>View My Recipes</b><i>+ Add Recipe</i></div>
+                     <span>kellie-portfolio — Visual Studio Code</span>
+                  </div>
+                  <div class="editor-workspace">
+                     <aside class="editor-activity">
+                        <span>▣</span><span>⌕</span><span>⑂</span><span>▷</span>
+                     </aside>
+                     <aside class="editor-explorer">
+                        <b>EXPLORER</b>
+                        <strong>⌄ KELLIE-PORTFOLIO</strong>
+                        <ul>
+                           <li>⌄ src</li>
+                           <li class="nested">◇ components</li>
+                           <li class="nested">◇ hooks</li>
+                           <li class="nested active">◆ DeveloperEasterEgg.tsx</li>
+                           <li class="nested">◆ ProjectGrid.tsx</li>
+                           <li class="nested">◆ ProjectCard.tsx</li>
+                           <li class="nested">◆ App.tsx</li>
+                           <li class="nested">◇ services</li>
+                           <li class="nested">◆ analytics.ts</li>
+                           <li>▷ public</li>
+                           <li><span class="js-file">JS</span> vite.config.js</li>
+                           <li><span class="json-file">{ }</span> package.json</li>
+                        </ul>
+                     </aside>
+                     <div class="editor-main">
+                        <div class="editor-tabs">
+                           <span class="active">◆ DeveloperEasterEgg.tsx&nbsp; ×</span>
+                           <span>◆ ProjectGrid.tsx&nbsp; ×</span>
                         </div>
-                        <img
-                           src="assets/images/pasta.png"
-                           alt="Creamy basil pasta"
-                        />
+                        <div class="code-breadcrumbs">
+                           src &rsaquo; components &rsaquo; DeveloperEasterEgg.tsx
+                        </div>
+                        <pre class="code-editor"><code><span class="line"><i>1</i><span class="pink">import</span> { useEffect, useMemo, useState } <span class="pink">from</span> <span class="green">'react'</span>;</span>
+<span class="line"><i>2</i></span>
+<span class="line"><i>3</i><span class="blue">type</span> <span class="yellow">BuildStage</span> = { label: <span class="blue">string</span>; detail: <span class="blue">string</span>; delay: <span class="blue">number</span> };</span>
+<span class="line"><i>4</i></span>
+<span class="line"><i>5</i><span class="pink">const</span> stages: <span class="yellow">ReadonlyArray</span>&lt;<span class="yellow">BuildStage</span>&gt; = [</span>
+<span class="line"><i>6</i>   { label: <span class="green">'Compiling brilliance'</span>, detail: <span class="green">'Negotiating with TypeScript…'</span>, delay: <span class="orange">700</span> },</span>
+<span class="line"><i>7</i>   { label: <span class="green">'Running tests'</span>, detail: <span class="green">'Asking the bugs to leave politely…'</span>, delay: <span class="orange">900</span> },</span>
+<span class="line"><i>8</i>   { label: <span class="green">'Deploying'</span>, detail: <span class="green">'Turning coffee into production code…'</span>, delay: <span class="orange">800</span> },</span>
+<span class="line"><i>9</i>   { label: <span class="green">'Success'</span>, detail: <span class="green">'It works! Please don\'t ask how. 😅'</span>, delay: <span class="orange">0</span> }</span>
+<span class="line"><i>10</i>] <span class="pink">as const</span>;</span>
+<span class="line"><i>11</i></span>
+<span class="line"><i>12</i><span class="pink">export function</span> <span class="yellow">DeveloperEasterEgg</span>() {</span>
+<span class="line"><i>13</i>   <span class="pink">const</span> [step, setStep] = <span class="yellow">useState</span>(<span class="orange">0</span>);</span>
+<span class="line"><i>14</i>   <span class="pink">const</span> current = stages[step];</span>
+<span class="line"><i>15</i>   <span class="pink">const</span> progress = <span class="yellow">useMemo</span>(() =&gt;</span>
+<span class="line"><i>16</i>      Math.round(((step + <span class="orange">1</span>) / stages.length) * <span class="orange">100</span>), [step]);</span>
+<span class="line"><i>17</i></span>
+<span class="line"><i>18</i>   <span class="yellow">useEffect</span>(() =&gt; {</span>
+<span class="line"><i>19</i>      <span class="pink">if</span> (step === stages.length - <span class="orange">1</span>) {</span>
+<span class="line"><i>20</i>         console.info(<span class="green">'☕ Achievement unlocked: shipped before the coffee got cold.'</span>);</span>
+<span class="line"><i>21</i>         <span class="pink">return</span>;</span>
+<span class="line"><i>22</i>      }</span>
+<span class="line"><i>23</i></span>
+<span class="line"><i>24</i>      <span class="pink">const</span> timer = window.setTimeout(() =&gt;</span>
+<span class="line"><i>25</i>         setStep(value =&gt; Math.min(value + <span class="orange">1</span>, stages.length - <span class="orange">1</span>)),</span>
+<span class="line"><i>26</i>         current.delay</span>
+<span class="line"><i>27</i>      );</span>
+<span class="line"><i>28</i></span>
+<span class="line"><i>29</i>      <span class="pink">return</span> () =&gt; window.clearTimeout(timer);</span>
+<span class="line"><i>30</i>   }, [step, current.delay]);</span>
+<span class="line"><i>31</i></span>
+<span class="line"><i>32</i>   <span class="pink">return</span> (</span>
+<span class="line"><i>33</i>      &lt;<span class="blue">output</span> <span class="cyan">aria-live</span>=<span class="green">"polite"</span> <span class="cyan">data-progress</span>={progress}&gt;</span>
+<span class="line"><i>34</i>         &lt;<span class="blue">strong</span>&gt;{current.label}&lt;/<span class="blue">strong</span>&gt; — {current.detail} ({progress}%)</span>
+<span class="line"><i>35</i>      &lt;/<span class="blue">output</span>&gt;</span>
+<span class="line"><i>36</i>   );</span>
+<span class="line"><i>37</i>}</span></code></pre>
                      </div>
-                     <div class="recipe-row">
-                        <div>
-                           <img src="assets/images/pasta.png" alt="" /><b
-                              >Creamy Garlic Pasta</b
+                  </div>
+                        <div class="editor-statusbar">
+                           <span>⑂ main&nbsp;&nbsp; ✓ 0&nbsp;&nbsp; △ 0</span>
+                           <span
+                              >Ln 14, Col 38&nbsp;&nbsp; UTF-8&nbsp;&nbsp;
+                              TypeScript React</span
                            >
-                        </div>
-                        <div class="food-tile chicken">
-                           <b>Smoky BBQ Chicken</b>
-                        </div>
-                        <div class="food-tile burger">
-                           <b>Classic Beef Burgers</b>
-                        </div>
-                        <div class="food-tile salmon">
-                           <b>Honey Glazed Salmon</b>
                         </div>
                      </div>
                   </div>
-                  <div class="laptop-base"><span></span></div>
+                  <div class="code-laptop-base"><span></span></div>
                </div>
             </div>
          </section>
@@ -252,7 +299,7 @@
                   practical solutions that make life easier for businesses and
                   their customers.
                </p>
-               <a class="text-link" href="mailto:hello@kelliegrant.ca"
+               <a class="text-link" href="pages/about.html"
                   >More about me <span>→</span></a
                >
             </div>
