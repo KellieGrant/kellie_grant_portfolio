@@ -483,8 +483,19 @@ h1 span {
 
 .project-image {
    position: relative;
+   display: block;
    height: 220px;
    overflow: hidden;
+}
+
+.project-image img,
+.project-overlay {
+   transition: transform 220ms ease;
+}
+
+.project-image:hover img,
+.project-image:hover .project-overlay {
+   transform: scale(1.015);
 }
 
 .recipebook-preview {
@@ -573,6 +584,11 @@ h1 span {
    font: 500 10px var(--font-mono);
    letter-spacing: 1px;
    text-transform: uppercase;
+}
+
+.card-links a:hover {
+   text-decoration: underline;
+   text-underline-offset: 4px;
 }
 
 /* Process */
